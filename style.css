@@ -1,0 +1,142 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Lebron.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+#envelope {
+    margin: 15px;
+}
+
+#cornbeef {
+    position: relative;
+    margin: 0 auto;
+    border: 2px solid #002dff;
+    border-radius: 30px;
+    background-color: #ffcaaa;
+    width: 75%;
+    max-width: 280px;
+    padding: 8px;
+    text-align: center;
+}
+
+#customControls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#PlayPauseBtn {
+    margin-left: 15px;
+    padding: 12px;
+    width: 60px; /* Increased width */
+    height: 45px; /* Increased height */
+    background-color: #ff92a1;
+    color: #ffffff;
+    border: none;
+    border-radius: 40%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#PlayPauseBtn:hover {
+    background-color: #ff6390;
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90px;
+    height: 8px;
+    border-radius: 5px;
+    background: #ff92a1;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#rectangle {
+    overflow: auto;
+    background-color: LightPink;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    max-height: 60vh;
+    width: 85%;
+    max-width: 450px;
+    margin: 15px auto;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px pink, 0 0 25px pink, 0 0 5px pink;
+    transition: height 0.5s ease;
+}
+
+p {
+    padding: 2px;
+    margin: 2px;
+    font-size: 0.9em;
+}
+
+#burat {
+    position: sticky;
+    top: 5px;
+    height: auto;
+    font-size: 1.8em;
+    font-family: Sans-Serif;
+    text-align: center;
+}
+
+.lambo {
+    opacity: 0;
+    animation: fadeIn 13s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.burat {
+    opacity: 0;
+    animation: fadeIn 13s ease-in forwards;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    #envelope {
+        margin: 8px;
+    }
+    
+    #PlayPauseBtn {
+        width: 55px;
+        height: 40px;
+    }
+
+    .volume-slider {
+        width: 75px;
+    }
+
+    #burat {
+        font-size: 1.4em;
+    }
+}
